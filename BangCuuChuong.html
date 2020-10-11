@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bảng cửu chương</title>
+    <style>
+        table th td
+        {
+            border: 1px solid black;
+            border-collapse: collapse
+        }
+    </style>
+</head>
+<body onload="printTable()">
+<script>
+    function printTable()
+    {
+        var table = "<table border='1' width='300' cellspacing='0' cellpadding='3'>";
+        console.log(table);
+        for(let i = 1; i < 10; i++){
+            table = table + "<tr>";
+            console.log(table);
+            for(let j = 1; j < 10; j++){
+                table = table + "<td>" + i.toString() + "x" + j.toString() + "=" + (i*j).toString() + "</td>";
+                console.log(table);
+            }
+            table = table + "</tr>";
+        }
+        table = table + "</table>";
+        document.write(table);
+    }
+</script>
+</body>
+</html>
